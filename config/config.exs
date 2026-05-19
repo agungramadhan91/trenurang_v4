@@ -1,5 +1,7 @@
 import Config
 
+config :trenurang_core, ecto_repos: [TrenurangCore.Repo]
+
 config :logger, :default_handler, level: :info
 
 config :logger, :default_formatter,

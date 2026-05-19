@@ -10,6 +10,8 @@ setup:
 # Database
 db.create:
 	mix ecto.create
+	PGPASSWORD=postgres psql -U postgres -h localhost -d trenurang_dev -c "CREATE EXTENSION IF NOT EXISTS postgis;"
+	PGPASSWORD=postgres psql -U postgres -h localhost -d trenurang_test -c "CREATE EXTENSION IF NOT EXISTS postgis;" || true
 
 db.drop:
 	mix ecto.drop
