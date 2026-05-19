@@ -13,6 +13,9 @@ db.create:
 	PGPASSWORD=postgres psql -U postgres -h localhost -d trenurang_dev -c "CREATE EXTENSION IF NOT EXISTS postgis;"
 	PGPASSWORD=postgres psql -U postgres -h localhost -d trenurang_test -c "CREATE EXTENSION IF NOT EXISTS postgis;" || true
 
+db.gen.migration:
+	mix ecto.gen.migration -r TrenurangCore.Repo $(name)
+
 db.drop:
 	mix ecto.drop
 

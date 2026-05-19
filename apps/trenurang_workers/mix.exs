@@ -31,7 +31,8 @@ defmodule TrenurangWorkers.MixProject do
       {:trenurang_trust, in_umbrella: true},
       {:trenurang_graph, in_umbrella: true},
       {:trenurang_billing, in_umbrella: true},
-      {:trenurang_ecosystem, in_umbrella: true}
+      {:trenurang_ecosystem, in_umbrella: true},
+      {:oban, "~> 2.18"}
     ]
   end
 end
